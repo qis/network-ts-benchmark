@@ -14,7 +14,7 @@ On Linux and FreeBSD, execute `make install`.
 
 Windows 10 Pro 64-bit, Intel Core i7-5500U @ 2.4GHz, 8 GiB RAM
 
-```
+```cmd
 > bin\ntsb_asio 5 20 4096 127.0.0.1 8080
 [asio] 127.0.0.1:8080 (20 threads, 4096 messages)
 1/5: 640.0MiB in 2567ms (249.3 MiB/s)
@@ -24,7 +24,7 @@ Windows 10 Pro 64-bit, Intel Core i7-5500U @ 2.4GHz, 8 GiB RAM
 5/5: 640.0MiB in 2108ms (303.6 MiB/s)
 ```
 
-```
+```cmd
 > bin\ntsb_net 5 20 4096 127.0.0.1 8080
 [net] 127.0.0.1:8080 (20 threads, 4096 messages)
 1/5: 640.0MiB in 2211ms (289.4 MiB/s)
@@ -36,7 +36,7 @@ Windows 10 Pro 64-bit, Intel Core i7-5500U @ 2.4GHz, 8 GiB RAM
 
 WSL @ Windows 10 Pro 64-bit, Intel Core i7-5500U @ 2.4GHz, 8 GiB RAM
 
-```cmd
+```sh
 $ bin/ntsb_asio 5 20 4096 127.0.0.1 8080
 [asio] 127.0.0.1:8080 (20 threads, 4096 messages)
 1/5: 640.0MiB in 6121ms (104.5 MiB/s)
@@ -46,7 +46,7 @@ $ bin/ntsb_asio 5 20 4096 127.0.0.1 8080
 5/5: 640.0MiB in 6888ms (92.9 MiB/s)
 ```
 
-```
+```sh
 $ bin/ntsb_net 5 20 4096 127.0.0.1 8080
 [net] 127.0.0.1:8080 (20 threads, 4096 messages)
 1/5: 640.0MiB in 6193ms (103.3 MiB/s)
@@ -58,7 +58,7 @@ $ bin/ntsb_net 5 20 4096 127.0.0.1 8080
 
 Ubuntu 16.04.2 LTS 64-bit, ESXi 5.5.0, Intel Xeon E5-2609 @ 2.5GHz, 8 Cores, 4GiB RAM
 
-```
+```sh
 $ bin/ntsb_asio 5 20 4096 127.0.0.1 8080
 [asio] 127.0.0.1:8080 (20 threads, 4096 messages)
 1/5: 640.0MiB in 544ms (1175.7 MiB/s)
@@ -68,7 +68,7 @@ $ bin/ntsb_asio 5 20 4096 127.0.0.1 8080
 5/5: 640.0MiB in 472ms (1354.0 MiB/s)
 ```
 
-```
+```sh
 $ bin/ntsb_net 5 20 4096 127.0.0.1 8080
 [net] 127.0.0.1:8080 (20 threads, 4096 messages)
 1/5: 640.0MiB in 603ms (1060.7 MiB/s)
@@ -80,7 +80,7 @@ $ bin/ntsb_net 5 20 4096 127.0.0.1 8080
 
 FreeBSD 11.0-RELEASE-p9 64-bit, ESXi 5.5.0, Intel Xeon E5-2609 @ 2.5GHz, 8 Cores, 4GiB RAM
 
-```
+```sh
 $ bin/ntsb_asio 5 20 4096 127.0.0.1 8080
 [asio] 127.0.0.1:8080 (20 threads, 4096 messages)
 1/5: 640.0MiB in 468ms (1366.1 MiB/s)
@@ -90,7 +90,7 @@ $ bin/ntsb_asio 5 20 4096 127.0.0.1 8080
 5/5: 640.0MiB in 470ms (1361.2 MiB/s)
 ```
 
-```
+```sh
 $ bin/ntsb_net 5 20 4096 127.0.0.1 8080
 [net] 127.0.0.1:8080 (20 threads, 4096 messages)
 1/5: 640.0MiB in 457ms (1398.5 MiB/s)
