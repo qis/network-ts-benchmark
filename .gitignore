@@ -1,0 +1,17 @@
+# Binaries
+/bin/
+/build/
+/res/*.aps
+/third_party/build/
+/core
+
+# Hidden Files
+.*
+!.gitattributes
+!.gitignore
+
+# Application
+/*.db
+/*.db-journal
+/*.json
+/*.log
