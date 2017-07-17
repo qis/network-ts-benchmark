@@ -138,6 +138,11 @@ public:
     for (std::size_t i = 0; i < send_buffer_.size(); i++) {
       send_buffer_[i] = '0' + (i % 10);
     }
+    std::error_code ec;
+    socket_.connect(endpoint_, ec);
+    if (ec) {
+      throw std::system_error(ec, "connect");
+    }
     thread_ = std::thread([this]() {
       try {
         io_context_.run();
@@ -155,20 +160,15 @@ public:
   client& operator=(const client& other) = delete;
 
   void start() {
-    socket_.async_connect(endpoint_, [this](const std::error_code& ec) {
-      if (ec) {
-        throw std::system_error(ec, "connect");
-      }
-      recv(messages_ * send_buffer_.size());
-      const auto buffer = net::buffer(send_buffer_);
-      for (std::size_t i = 0; i < messages_; i++) {
-        net::async_write(socket_, buffer, [](const std::error_code& ec, std::size_t size) {
-          if (ec) {
-            throw std::system_error(ec, "send");
-          }
-        });
-      }
-    });
+    recv(messages_ * send_buffer_.size());
+    const auto buffer = net::buffer(send_buffer_);
+    for (std::size_t i = 0; i < messages_; i++) {
+      net::async_write(socket_, buffer, [](const std::error_code& ec, std::size_t size) {
+        if (ec) {
+          throw std::system_error(ec, "send");
+        }
+      });
+    }
     work_.reset();
   }
 
